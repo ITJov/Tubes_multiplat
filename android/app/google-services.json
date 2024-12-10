@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "919814100716",
+    "project_id": "wartegtubes",
+    "storage_bucket": "wartegtubes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919814100716:android:74ecc8d1001adb885b77c9",
+        "android_client_info": {
+          "package_name": "com.warteg.tubes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBM54hbJVKylnyFi1bcUG4TpquNbeJzd4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

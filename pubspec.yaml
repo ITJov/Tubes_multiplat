@@ -1,0 +1,34 @@
+name: tubes_multiplat_2272023
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.0.0
+  firebase_core: ^3.8.0
+  firebase_auth: ^5.3.3
+  cloud_firestore: ^5.0.2
+  flutter_riverpod: ^2.6.1
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/food_bg.jpg
+    - assets/images/ayam_goreng.jpg
+    - assets/images/mie_goreng.jpg
+    - assets/images/nasi_goreng.jpg
+    - assets/images/tahu_tempe.jpg
+    - assets/logo/logo.jpeg
+
