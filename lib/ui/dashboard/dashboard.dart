@@ -12,7 +12,6 @@ class DashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Banner
             Container(
               margin: EdgeInsets.all(16.0),
               padding: EdgeInsets.all(16.0),
@@ -20,7 +19,7 @@ class DashboardPage extends StatelessWidget {
                 color: Colors.orange.shade100,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Row(
+              child:const Row(
                 children: [
                   Icon(Icons.local_dining, size: 50, color: Colors.orange),
                   SizedBox(width: 16),
@@ -66,7 +65,6 @@ class DashboardPage extends StatelessWidget {
               ),
             ),
 
-            // Popular Items
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
@@ -74,9 +72,7 @@ class DashboardPage extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ),
-            ListView(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+            Column(
               children: [
                 _buildPopularItem(
                   context,
@@ -100,6 +96,7 @@ class DashboardPage extends StatelessWidget {
 
   Widget _buildCategoryCard(IconData icon, String title) {
     return Container(
+      width: 100,
       margin: EdgeInsets.symmetric(horizontal: 8),
       padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -114,6 +111,7 @@ class DashboardPage extends StatelessWidget {
           Text(
             title,
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
           ),
         ],
       ),
@@ -129,8 +127,18 @@ class DashboardPage extends StatelessWidget {
       title: Text(name),
       subtitle: Text(price),
       onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text("You tapped on $name")),
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Scaffold(
+              appBar: AppBar(
+                title: Text(name),
+              ),
+              body: Center(
+                child: Text("Detail page for $name"),
+              ),
+            ),
+          ),
         );
       },
     );

@@ -35,10 +35,13 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        items: const[
+        selectedItemColor: Colors.orange, // Warna ikon yang dipilih
+        unselectedItemColor: Colors.grey, // Warna ikon yang tidak dipilih
+        backgroundColor: Colors.white, // Warna latar belakang
+        items: const [
           BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
+            icon: Icon(Icons.home),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
@@ -49,8 +52,8 @@ class _MainPageState extends State<MainPage> {
             label: 'Cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person), 
-            label: 'Profile', 
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
       ),
